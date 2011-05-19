@@ -18,9 +18,6 @@ gem 'jquery-rails'
 gem 'omniauth',     '0.2.5'
 gem 'twitter'
 
-# Use unicorn as the web server
-# gem 'unicorn'
-
 # Deploy with Capistrano
 # gem 'capistrano'
 
@@ -29,4 +26,8 @@ gem 'twitter'
 
 group :test do
   gem 'rspec-rails'
+end
+
+group :production do
+  gem 'thin'
 end
