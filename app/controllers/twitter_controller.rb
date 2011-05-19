@@ -11,6 +11,7 @@ class TwitterController < ApplicationController
       config.oauth_token_secret = auth['credentials']['secret']
     end
     Twitter.update_profile_image(Rails.root.join('app','assets','images','j3face.jpg').open)
+    Twitter.update('I used http://j3face.com to update my avatar to the face of @j3 #j3face #railsconf')
     redirect_to auth['user_info']['urls']['Twitter']
   end
 end
